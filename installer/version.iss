@@ -1,0 +1,5 @@
+#define VersionNumber "0.3.0.553-3b1bcfb"
+#define TargetName "mayo"
+#define TargetArch "x64"
+#define TargetProduct "Mayo"
+#define TargetCompany "Fougue"
