@@ -134,6 +134,8 @@ public:
 
         m_propertyName.setUserReadOnly(false);
         m_propertyReferredName.setUserReadOnly(false);
+        //m_propertyColor.setUserReadOnly(false);
+        m_propertyReferredColor.setUserReadOnly(false);
     }
 
     void onPropertyChanged(Property* prop) override
@@ -142,6 +144,12 @@ public:
             CafUtils::setLabelAttrStdName(m_label, m_propertyName.value());
         else if (prop == &m_propertyReferredName)
             CafUtils::setLabelAttrStdName(m_labelReferred, m_propertyReferredName.value());
+
+        //if (prop == &m_propertyReferredColor){
+        //    const TDF_Label& label = m_label;
+        //    const XCaf& xcaf = treeNode.document()->xcaf();
+        //    m_propertyColor.setValue(xcaf.shapeColor(label));
+        //   }
 
         PropertyGroupSignals::onPropertyChanged(prop);
     }
